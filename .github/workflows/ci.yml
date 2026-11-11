@@ -45,4 +45,6 @@ jobs:
         with:
           context: .
           push: ${{ github.event_name == 'push' }}
-          tags: ghcr.io/adedejiwickliffe/devops-gcp-lab:latest
+          tags: |
+            ghcr.io/adedejiwickliffe/devops-gcp-lab:latest
+            ghcr.io/adedejiwickliffe/devops-gcp-lab:${{ github.sha }}
