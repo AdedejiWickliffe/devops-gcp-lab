@@ -1,0 +1,14 @@
+steps:
+  - name: 'python:3.12-slim'
+    entrypoint: 'python'
+    args:
+      - '-m'
+      - 'unittest'
+      - 'discover'
+      - '-s'
+      - 'tests'
+      - '-v'
+
+options:
+  logging: CLOUD_LOGGING_ONLY
+
